@@ -1,0 +1,7 @@
+image:
+  repository: infisical/infisical
+  tag: "latest"
+  pullPolicy: IfNotPresent
+ingress:
+  nginx:
+    enabled: false 

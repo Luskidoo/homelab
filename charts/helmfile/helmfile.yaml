@@ -1,0 +1,10 @@
+repositories:
+ - name: infisical-helm-charts
+   url: 'https://dl.cloudsmith.io/public/infisical/helm-charts/helm/charts/'
+
+releases:
+- name: infisical
+  namespace: security
+  chart: infisical-helm-charts/infisical-standalone
+  values:
+  - infisical.yaml
