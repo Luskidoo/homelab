@@ -7,4 +7,4 @@ releases:
   namespace: security
   chart: infisical-helm-charts/infisical-standalone
   values:
-  - infisical.yaml
+  - ./values/infisical.yaml
