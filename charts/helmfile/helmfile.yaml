@@ -13,4 +13,4 @@ releases:
           AUTH_SECRET: "{{ .Values.infisical_secrets.AUTH_SECRET }}"
           SITE_URL: "{{ .Values.infisical_secrets.SITE_URL }}"
   secrets:
-  - secrets.yaml      
+  - ./infisical/secrets.yaml      
