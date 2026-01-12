@@ -1,16 +1,8 @@
 repositories:
- - name: infisical-helm-charts
-   url: 'https://dl.cloudsmith.io/public/infisical/helm-charts/helm/charts/'
+ - name: bitwarden
+   url: https://charts.bitwarden.com/
 
 releases:
-- name: infisical
+- name: bitwarden
   namespace: security
-  chart: infisical-helm-charts/infisical-standalone
-  values:
-  - ./values/infisical.yaml
-  - backendEnvironmentVariables:
-          ENCRYPTION_KEY: "{{ .Values.infisical_secrets.ENCRYPTION_KEY }}"
-          AUTH_SECRET: "{{ .Values.infisical_secrets.AUTH_SECRET }}"
-          SITE_URL: "{{ .Values.infisical_secrets.SITE_URL }}"
-  secrets:
-  - ./infisical/secrets.yaml      
+  chart: bitwarden/sm-operator
