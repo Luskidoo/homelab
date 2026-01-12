@@ -9,8 +9,8 @@ releases:
   values:
   - ./values/infisical.yaml
   - backendEnvironmentVariables:
-          ENCRYPTION_KEY: {{ .Values.infisical_secrets.ENCRYPTION_KEY }}
-          AUTH_SECRET: {{ .Values.infisical_secrets.AUTH_SECRET }}
-          SITE_URL: {{ .Values.infisical_secrets.SITE_URL }}
+          ENCRYPTION_KEY: "{{ .Values.infisical_secrets.ENCRYPTION_KEY }}"
+          AUTH_SECRET: "{{ .Values.infisical_secrets.AUTH_SECRET }}"
+          SITE_URL: "{{ .Values.infisical_secrets.SITE_URL }}"
   secrets:
   - secrets.yaml      
