@@ -11,3 +11,5 @@ releases:
   chart: ../pihole
   values:
   - ./values/pihole.yaml
+  secrets:
+  - ../pihole/templates/secret.yaml
