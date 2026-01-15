@@ -6,3 +6,8 @@ releases:
 - name: bitwarden
   namespace: security
   chart: bitwarden/sm-operator
+- name: pihole
+  namespace: security
+  chart: ../pihole
+  values:
+  - ./pihole/values.yaml
