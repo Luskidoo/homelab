@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: .*\.yaml$
+    age: "age1fya5ptcuwkv3fts9pstep82juz6eam2rs6xr6ujkzmq5tp6k2p4qn7h5rw"
