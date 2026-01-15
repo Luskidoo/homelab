@@ -12,4 +12,4 @@ releases:
   values:
   - ./values/pihole.yaml
   secrets:
-  - ../pihole/templates/secret.yaml
+  - ./values/pihole-secret.yaml
