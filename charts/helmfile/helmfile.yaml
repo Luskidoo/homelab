@@ -10,4 +10,4 @@ releases:
   namespace: security
   chart: ../pihole
   values:
-  - ./values/piuhole.yaml
+  - ./values/pihole.yaml
