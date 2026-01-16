@@ -6,7 +6,7 @@ metadata:
 spec:
   gatewayClassName: traefik  # Must match the name in 'kubectl get gatewayclass'
   listeners:
-  - name: http
+  - name: web
     protocol: HTTP
     port: 80
     allowedRoutes:
