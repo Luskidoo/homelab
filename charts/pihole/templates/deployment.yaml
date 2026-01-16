@@ -24,8 +24,8 @@ spec:
             secretKeyRef:
               name: pihole-secret
               key: password
-        #- name: VIRTUAL_HOST
-        #  value: "pihole.alstrom.home.arpa"
+        - name: FTLCONF_webserver_domain
+          value: "pihole.alstrom.home.arpa"
         # Use your local IP for the ServerIP env if needed
         ports:
         - containerPort: 53
