@@ -18,3 +18,6 @@ releases:
 - name: longhorn
   namespace: storage
   chart: longhorn/longhorn
+- name: storage
+  namespace: storage
+  chart: ../storage
