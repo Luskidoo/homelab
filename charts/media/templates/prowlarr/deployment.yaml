@@ -33,6 +33,7 @@ spec:
               mountPath: /config
             - name: data
               mountPath: /data
+              subPath: prowlarr
       volumes:
         - name: config
           persistentVolumeClaim:
@@ -40,4 +41,3 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName: media-pvc
-            subPath: prowlarr
