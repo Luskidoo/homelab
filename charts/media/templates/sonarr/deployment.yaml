@@ -34,6 +34,15 @@ spec:
             - name: data
               mountPath: /data
               subPath: sonarr
+        initContainers:
+          - name: create-directories
+            image: "busybox:latest"
+            command: ["sh", "-c", "mkdir /data/media/tv && chown -R 1000:1000 /config /data/media/tv"]
+            volumeMounts:
+              - name: config
+                mountPath: /config
+              - name: data
+                mountPath: /data
       volumes:
         - name: config
           persistentVolumeClaim:

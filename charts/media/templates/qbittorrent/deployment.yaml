@@ -44,6 +44,15 @@ spec:
             - name: data
               mountPath: /data
               subPath: qbittorrent
+      initContainers:
+          - name: create-directories
+            image: "busybox:latest"
+            command: ["sh", "-c", "mkdir /data/downloads && chown -R 1000:1000 /config /data/downloads"]
+            volumeMounts:
+              - name: config
+                mountPath: /config
+              - name: data
+                mountPath: /data
       volumes:
         - name: config
           persistentVolumeClaim:

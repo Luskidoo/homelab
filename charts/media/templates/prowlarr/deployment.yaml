@@ -28,16 +28,3 @@ spec:
               value: "1000"
             - name: TZ
               value: "UTC"
-          volumeMounts:
-            - name: config
-              mountPath: /config
-            - name: data
-              mountPath: /data
-              subPath: prowlarr
-      volumes:
-        - name: config
-          persistentVolumeClaim:
-            claimName: prowlarr-config-pvc
-        - name: data
-          persistentVolumeClaim:
-            claimName: media-pvc
