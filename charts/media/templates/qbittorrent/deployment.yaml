@@ -46,7 +46,6 @@ spec:
             mountPath: /config
           - name: data
             mountPath: /data
-            subPath: qbittorrent
       initContainers:
       - name: create-directories
         image: "busybox:latest"
