@@ -18,6 +18,9 @@ spec:
       containers:
       - name: qbittorrent
         image: "linuxserver/qbittorrent:latest"
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
         ports:
           - name: http
             containerPort: 8080
@@ -47,7 +50,7 @@ spec:
       initContainers:
       - name: create-directories
         image: "busybox:latest"
-        command: ["sh", "-c", "mkdir /data/downloads && chown -R 1000:1000 /config /data/downloads"]
+        command: ["sh", "-c", "mkdir /data/downloads && chown -R 1000:1000 /config /data"]
         volumeMounts:
           - name: config
             mountPath: /config

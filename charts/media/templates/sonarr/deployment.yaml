@@ -36,7 +36,7 @@ spec:
       initContainers:
       - name: create-directories
         image: "busybox:latest"
-        command: ["sh", "-c", "mkdir -p /data/media && mkdir -p /data/media/tv && chown -R 1000:1000 /config /data/media/tv"]
+        command: ["sh", "-c", "mkdir -p /data/media && mkdir -p /data/media/tv && chown -R 1000:1000 /config /data"]
         volumeMounts:
           - name: config
             mountPath: /config
