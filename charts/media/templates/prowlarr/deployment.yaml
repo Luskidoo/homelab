@@ -40,3 +40,4 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName: media-pvc
+            subPath: prowlarr
