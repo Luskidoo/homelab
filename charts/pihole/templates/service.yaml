@@ -15,7 +15,6 @@ spec:
     protocol: TCP
     name: dns-tcp
   type: LoadBalancer
-  externalTrafficPolicy: Local
 ---
 apiVersion: v1
 kind: Service
