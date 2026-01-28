@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: jellyfin
-        image: "ghcr.io/onedr0p/jellyfin:latest"
+        image: "linuxserver/jellyfin:latest"
         ports:
         - name: http
           containerPort: 8096
