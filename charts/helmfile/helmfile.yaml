@@ -13,8 +13,8 @@ releases:
   chart: ../pihole
   values:
   - ./values/pihole.yaml
-  secrets:
-  - ./values/pihole-secret.yaml
+  #secrets:
+  #- ./values/pihole-secret.yaml
 - name: longhorn
   namespace: storage
   chart: longhorn/longhorn
