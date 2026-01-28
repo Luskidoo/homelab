@@ -19,19 +19,19 @@ spec:
       - name: prowlarr
         image: "linuxserver/prowlarr:latest"
         ports:
-          - containerPort: 9696
+        - containerPort: 9696
         imagePullPolicy: IfNotPresent
         env:
-          - name: PUID
-            value: "1000"
-          - name: PGID
-            value: "1000"
-          - name: TZ
-            value: "UTC"
+        - name: PUID
+          value: "1000"
+        - name: PGID
+          value: "1000"
+        - name: TZ
+          value: "UTC"
         volumeMounts:
-            - name: config
-              mountPath: /config
-        volumes:
-          - name: config
-            persistentVolumeClaim:
-              claimName: prowlarr-config-pvc
+        - name: config
+          mountPath: /config
+      volumes:
+      - name: config
+        persistentVolumeClaim:
+          claimName: prowlarr-config-pvc
