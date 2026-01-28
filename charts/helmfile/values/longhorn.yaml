@@ -1,0 +1,12 @@
+persistence:
+  defaultClassReplicaCount: 1  # Reduces default replicas from 3 to 1
+
+defaultSettings:
+  # Allows multiple replicas to land on the same node
+  replicaSoftAntiAffinity: true 
+  
+  # Optional: Adjust if your disk is small/filling up
+  storageMinimalAvailablePercentage: 15 
+  
+  # Optional: Automatically cleanup system-generated snapshots
+  replicaAutoBalance: "best-effort"

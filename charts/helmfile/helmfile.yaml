@@ -18,6 +18,8 @@ releases:
 - name: longhorn
   namespace: storage
   chart: longhorn/longhorn
+  values:
+  - ./values/longhorn.yaml
 - name: storage
   namespace: storage
   chart: ../storage
