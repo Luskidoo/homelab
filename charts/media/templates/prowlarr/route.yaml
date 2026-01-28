@@ -15,4 +15,4 @@ spec:
         value: /
     backendRefs:
     - name: prowlarr
-      port: 8989
+      port: 9696
