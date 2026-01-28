@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jellyfin
+  labels:
+    app: jellyfin
+spec:
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: jellyfin
+  template:
+    metadata:
+      labels:
+        app: jellyfin
+    spec:
+      containers:
+      - name: jellyfin
+        image: "ghcr.io/onedr0p/jellyfin:latest"
+        ports:
+        - name: http
+          containerPort: 8096
+          protocol: TCP
+        - name: udp
+          containerPort: 7359
+          protocol: UDP
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: PUID
+            value: "1000"
+          - name: PGID
+            value: "1000"
+          - name: TZ
+            value: "UTC"
+        volumeMounts:
+          - name: config
+            mountPath: /opt/jellyfin/config
+          - name: data
+            mountPath: /data
+            readOnly: true
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: jellyfin-config-pvc
+        - name: data
+          persistentVolumeClaim:
+            claimName: media-pvc
