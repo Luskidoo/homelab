@@ -21,3 +21,6 @@ releases:
 - name: storage
   namespace: storage
   chart: ../storage
+- name: media
+  namespace: media
+  chart: ../media
