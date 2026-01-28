@@ -8,4 +8,4 @@ spec:
   storageClassName: longhorn
   resources:
     requests:
-      storage: 5Gi # Sonarr's DB rarely needs more than this
+      storage: 5Gi
